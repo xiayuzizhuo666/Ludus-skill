@@ -5,12 +5,13 @@
 - Repository: https://github.com/Samwang-afk/LawBox
 - Snapshot: 2026-11-07
 - Tree SHA256: `644a16275233f9fe56b7d7acb82488557f720a25669a2dad9224f01694539add`
-- License: PolyForm Noncommercial 1.0.0 (LawBox additions) + MIT (upstream `pa1nrui1/legal-skills`)
+- License: PolyForm Noncommercial 1.0.0 for original LawBox content (per current maintainers); upstream MIT license text retained for the upstream snapshot.
 - Vendored at: `skills/legal/ludus-lawbox/references/_vendor/lawbox/`
 - Included: `skills/legal/` (58 个技能目录), `knowledge/lessons.md`, `LICENSE`, `LICENSES/upstream-MIT.txt`, `THIRD_PARTY_NOTICES.md`, `README.md`, `upstream-root-SKILL.md`.
 - Excluded: `**/scripts/tests/`, root `tests/`, `packs/`, `plugin-skills/`, `.codex-plugin/`, `assets/`, `CHANGELOG.md`, temp files, screenshots, `.gitignore`, `.gitattributes`.
 - Original licenses: `references/_vendor/lawbox/LICENSE` (PolyForm NC), `references/_vendor/lawbox/LICENSES/upstream-MIT.txt` (MIT), `references/_vendor/lawbox/THIRD_PARTY_NOTICES.md`.
 - Constraint: noncommercial distribution is allowed under PolyForm Noncommercial 1.0.0; keep the license and notices; commercial use requires permission.
+- Dual licensing: the current maintainers additionally license the original LawBox content under PolyForm NC; the upstream MIT license remains available for the upstream snapshot. MIT rights already granted cannot be revoked.
 
 ## 2. cn-law-hub
 

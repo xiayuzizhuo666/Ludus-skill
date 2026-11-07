@@ -1,10 +1,10 @@
 # License
 
-The new packaging, entry skill, routing documents, adapter scripts, tests, READMEs, and the self-authored `wechat-article-writer` in this package are licensed under the PolyForm Noncommercial License 1.0.0 below. Commercial use requires a separate license.
+All original WeChat suite content in this package, including the packaging, entry skill, `wechat-pipeline`, tutorial docs, and the self-authored `wechat-article-writer`, is licensed under the PolyForm Noncommercial License 1.0.0 below. Commercial use requires a separate license.
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
 
-Vendored upstream components remain under their original licenses: `wechat-topic-selector` MIT, `wechat-publisher` ISC, and `wechat-article-pipeline` MIT. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
+Third-party components remain under their original licenses: `wechat-topic-selector` MIT, `wechat-publisher` ISC, and `wechat-article-pipeline` MIT. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
 
 ---
 

@@ -51,9 +51,9 @@ Ludus-WeChat/
 
 ## 许可
 
-新增封装/入口与自写写作技能 PolyForm Noncommercial 1.0.0；`wechat-topic-selector` MIT；`wechat-publisher` ISC；增强项目 MIT。
+原创公众号内容（封装/入口/一条龙/写作/文档）PolyForm Noncommercial 1.0.0；第三方组件 `wechat-topic-selector` MIT、`wechat-publisher` ISC、`wechat-article-pipeline` MIT。
 
-非商用；商业使用新增内容需取得授权。上游组件仍按原许可证授权；保留 `wechat-publisher` 的 ISC 声明。
+非商用；商业使用原创内容需取得授权。第三方组件保留原许可证。
 
 商业授权请联系：https://github.com/xiayuzizhuo666 。
 

@@ -1,7 +1,7 @@
 {
   "package": "Ludus-WeChat",
   "version": "1.0.0",
-  "licenseSummary": "PolyForm-Noncommercial-1.0.0 (new packaging and self-authored writer) AND MIT (wechat-topic-selector and enhancement) AND ISC (wechat-publisher)",
+  "licenseSummary": "PolyForm-Noncommercial-1.0.0 (original WeChat content and self-authored writer) AND MIT (wechat-topic-selector and enhancement) AND ISC (wechat-publisher)",
   "internalUseOnly": false,
   "compliancePassRequired": false,
   "upstream": [
@@ -52,5 +52,19 @@
       "reason": "upstream had no LICENSE file; not included"
     }
   ],
-  "commercialUseRequiresPermission": true
+  "commercialUseRequiresPermission": true,
+  "licenseExceptions": [
+    {
+      "name": "wechat-topic-selector",
+      "license": "MIT"
+    },
+    {
+      "name": "wechat-publisher",
+      "license": "ISC"
+    },
+    {
+      "name": "wechat-article-pipeline",
+      "license": "MIT"
+    }
+  ]
 }

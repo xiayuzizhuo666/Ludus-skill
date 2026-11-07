@@ -8,7 +8,7 @@
 
 | 目录 | 作用 | 许可 |
 |---|---|---|
-| `skills/wechat-pipeline/` | 一条龙调度入口 | MIT（本包新增） |
+| `skills/wechat-pipeline/` | 一条龙调度入口 | PolyForm NC（本包原创） |
 | `skills/wechat-topic-selector/` | 热榜选题 | MIT |
 | `skills/wechat-article-writer/` | 六阶段写作、标题、框架、风格、配图提示词 | PolyForm NC（本包自写替换） |
 | `skills/wechat-publisher/` | Markdown → 公众号 HTML、草稿提交 | ISC |

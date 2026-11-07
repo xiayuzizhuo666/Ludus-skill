@@ -5,9 +5,9 @@
 | 包 | 入口技能 | 领域 | 许可 |
 |---|---|---|---|
 | `Ludus-HowToLiveBetter` | `leisure/ludus-howtolivebetter` | 日常生活咨询与决策 | PolyForm NC（新增）+ CC BY 4.0（书）+ MIT（上游） |
-| `Ludus-LawBox` | `legal/ludus-lawbox` | 中国法律咨询与工作流 | PolyForm NC（新增 + LawBox）+ MIT（上游）+ Apache-2.0 |
+| `Ludus-LawBox` | `legal/ludus-lawbox` | 中国法律咨询与工作流 | PolyForm NC（原创）+ Apache-2.0（cn-law-hub）；上游 MIT 保留 |
 | `Ludus-china-accounting-suite` | `finance/ludus-china-accounting` | 中国会计准则、记账、报税、审计 | PolyForm NC（新增）+ MIT（上游） |
-| `Ludus-WeChat` | `social-media/ludus-wechat` | 公众号运营、写作、排版、草稿发布 | PolyForm NC（新增 + 自写写作）+ MIT + ISC |
+| `Ludus-WeChat` | `social-media/ludus-wechat` | 公众号运营、写作、排版、草稿发布 | PolyForm NC（原创 + 自写写作）+ MIT/ISC（第三方） |
 
 ## 快速安装
 
@@ -66,8 +66,8 @@ Ludus-<Domain>/
 
 - `Ludus-HowToLiveBetter`：新增封装/入口/适配内容 PolyForm Noncommercial 1.0.0；书籍正文 CC BY 4.0；上游代码/增强 MIT + CC BY 4.0。再分发需保留署名与来源链接；商业使用新增内容需授权。
 - `Ludus-china-accounting-suite`：新增封装/入口 PolyForm Noncommercial 1.0.0；上游 26 个技能 MIT。商业使用新增内容需授权；保留上游 `LICENSE`。
-- `Ludus-LawBox`：新增封装/入口与 LawBox 新增内容 PolyForm Noncommercial 1.0.0；上游 legal-skills MIT；含 `cn-law-hub`（Apache-2.0）。**非商用；商业使用需另行取得授权。**
-- `Ludus-WeChat`：新增封装/入口与自写写作技能 PolyForm Noncommercial 1.0.0；`wechat-topic-selector` MIT；`wechat-publisher` ISC；增强项目 MIT。商业使用新增内容需授权。
+- `Ludus-LawBox`：原创 LawBox 内容（含封装/入口）PolyForm Noncommercial 1.0.0；上游 MIT 许可证文本保留；含 `cn-law-hub`（Apache-2.0）。**非商用；商业使用需另行取得授权。**
+- `Ludus-WeChat`：原创公众号内容（含封装/入口/一条龙/写作）PolyForm Noncommercial 1.0.0；`wechat-topic-selector` MIT；`wechat-publisher` ISC；`wechat-article-pipeline` MIT。商业使用原创内容需授权。
 
 每个包的 `THIRD-PARTY-NOTICES.md` 记录了上游仓库、快照/commit、许可证、复制范围和修改说明。
 

@@ -18,11 +18,17 @@ relicense them:
 
 - `Ludus-HowToLiveBetter`: book text CC BY 4.0; upstream code and the
   `how-to-survive-unemployment` enhancement MIT/CC BY 4.0.
-- `Ludus-LawBox`: LawBox additions PolyForm Noncommercial 1.0.0; upstream
-  `legal-skills` MIT; `cn-law-hub` Apache-2.0.
+- `Ludus-LawBox`: original LawBox content PolyForm Noncommercial 1.0.0;
+  upstream MIT license retained for the upstream snapshot; `cn-law-hub`
+  Apache-2.0.
 - `Ludus-china-accounting-suite`: upstream skills MIT.
-- `Ludus-WeChat`: `wechat-topic-selector` MIT; `wechat-publisher` ISC;
-  `wechat-article-pipeline` MIT.
+- `Ludus-WeChat`: original WeChat suite content and the self-authored writer
+  PolyForm Noncommercial 1.0.0; `wechat-topic-selector` MIT;
+  `wechat-publisher` ISC; `wechat-article-pipeline` MIT.
+
+Dual licensing for LawBox: the current maintainers additionally license the
+original LawBox content under PolyForm NC; the upstream MIT license remains
+available for the upstream snapshot. MIT rights already granted cannot be revoked.
 
 Because the upstream licenses permit their own commercial use, third parties may
 still use those upstream components under their original terms. The

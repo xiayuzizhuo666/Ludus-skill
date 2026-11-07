@@ -2,6 +2,7 @@
 
 本目录的权威许可见包根 `THIRD-PARTY-NOTICES.md`。
 
+- `wechat-pipeline`：PolyForm NC（本包原创）。
 - `wechat-topic-selector`：MIT。
 - `wechat-publisher`：ISC（magicx）。
 - `wechat-article-writer`：本包自写 PolyForm NC 实现；上游 ClawHub 版本没有 LICENSE，未包含。

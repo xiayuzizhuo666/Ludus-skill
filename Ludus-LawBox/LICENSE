@@ -1,10 +1,10 @@
 # License
 
-The new packaging, entry skill, routing documents, adapter scripts, tests, and READMEs in this package, together with the LawBox additions, are licensed under the PolyForm Noncommercial License 1.0.0 below. Commercial use requires a separate license.
+All original LawBox content in this package, including the packaging, entry skill, routing documents, adapter scripts, tests, READMEs, and the LawBox skill content authored by the current maintainers, is licensed under the PolyForm Noncommercial License 1.0.0 below. Commercial use requires a separate license.
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
 
-Vendored upstream components remain under their original licenses: upstream `legal-skills` MIT and `cn-law-hub` Apache-2.0. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
+The upstream MIT license text is retained for attribution and compliance for the upstream snapshot. The `cn-law-hub` enhancement remains under Apache-2.0. Third-party components remain under their original licenses. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
 
 ---
 

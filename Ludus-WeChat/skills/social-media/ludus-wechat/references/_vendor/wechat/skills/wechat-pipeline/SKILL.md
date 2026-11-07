@@ -4,7 +4,7 @@ description: 微信公众号一条龙调度技能。把选题、写作、配图�
 trigger-words: [公众号一条龙, 写并发布公众号, 从选题到草稿, 公众号全流程, wechat pipeline]
 metadata:
   version: 1.0.0
-  license: MIT
+  license: PolyForm-Noncommercial-1.0.0
 ---
 
 # 微信公众号一条龙

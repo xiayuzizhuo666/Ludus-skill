@@ -13,4 +13,4 @@
 
 ## 许可
 
-新增封装/入口与自写写作技能 PolyForm NC；`wechat-publisher` 为 ISC；`wechat-topic-selector` 为 MIT；增强项目 MIT；保留原许可证；商业使用新增内容需授权。
+原创公众号内容（含封装/入口/一条龙/写作）PolyForm NC；`wechat-topic-selector` MIT；`wechat-publisher` ISC；`wechat-article-pipeline` MIT；第三方组件保留原许可证；商业使用原创内容需授权。
