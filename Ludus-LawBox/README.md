@@ -55,4 +55,6 @@ Ludus-LawBox/
 
 **非商用许可**。新增封装/入口与 LawBox 新增内容为 PolyForm Noncommercial 1.0.0；公开仓库保留 NC 许可与声明，商业使用需另行取得授权。上游组件保留原许可证。
 
+商业授权请联系：https://github.com/xiayuzizhuo666 。
+
 上游归属与修改说明见 `THIRD-PARTY-NOTICES.md`；上游原始许可证在各自的 `references/_vendor/.../LICENSE`。

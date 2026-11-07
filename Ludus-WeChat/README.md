@@ -55,4 +55,6 @@ Ludus-WeChat/
 
 非商用；商业使用新增内容需取得授权。上游组件仍按原许可证授权；保留 `wechat-publisher` 的 ISC 声明。
 
+商业授权请联系：https://github.com/xiayuzizhuo666 。
+
 上游归属与修改说明见 `THIRD-PARTY-NOTICES.md`；上游原始许可证在各自的 `references/_vendor/.../LICENSE`。

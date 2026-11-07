@@ -55,4 +55,6 @@ Ludus-china-accounting-suite/
 
 非商用；商业使用新增内容需取得授权。上游技能仍按 MIT 授权；保留上游 `LICENSE` 与 `THIRD-PARTY-NOTICES.md`。
 
+商业授权请联系：https://github.com/xiayuzizhuo666 。
+
 上游归属与修改说明见 `THIRD-PARTY-NOTICES.md`；上游原始许可证在各自的 `references/_vendor/.../LICENSE`。

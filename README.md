@@ -76,3 +76,5 @@ Ludus-<Domain>/
 - 不含真实 AppID、AppSecret、API Key、企业账目、客户材料或案件材料。
 - 不会自动群发公众号文章；只提交草稿。
 - 不替代律师、会计师、税务师、医生或审计师的专业判断。
+
+商业授权请联系：https://github.com/xiayuzizhuo666 。
