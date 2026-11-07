@@ -55,11 +55,11 @@ metadata:
    - 配图：`ZHIPU_API_KEY`（脚本使用标准库 HTTP）
    - 选题：无 Python 依赖；百度/CSDN 需要 `curl`；微博/GitHub 需要可选 `mcporter`
 4. **公众号配置**：`WECHAT_APPID`、`WECHAT_APP_SECRET`，或 `skills/wechat-publisher/scripts/.wechat-config.json`
-5. **图片配置**：`ZHIPU_API_KEY`，或可写的 `image.env`（不要放进 vendor）
+5. **图片配置**：`ZHIPU_API_KEY`，或 `<ARTICLES_DIR>/image.env`（`generate_images.py` 自动读取；不要放进 vendor）
 6. **文章目录**：`WECHAT_ARTICLES_DIR`，未设置则用 `./articles`
 7. **IP 白名单**：提醒用户把当前公网 IP 加入公众号后台白名单
 
-配置示例见包裹根目录 `config/wechat.env.example`、`config/image.env.example`、`skills/wechat-article-writer/scripts/image.env.example`；实际 `image.env` 写到可写目录，不要放进 vendor。
+配置示例见包裹根目录 `config/wechat.env.example`、`config/image.env.example`、`skills/wechat-article-writer/scripts/image.env.example`；实际 `image.env` 写到 `<ARTICLES_DIR>/image.env`，脚本自动读取，也可 `--env-file`。
 
 ---
 
@@ -140,7 +140,7 @@ python3 topic_selector.py -d "AI 技术" --top 3 --output "<ARTICLES_DIR>/topic_
 5. 阶段 05 保存：写入 `ARTICLES_DIR/YYYYMMDD_标题关键词.md`
 6. 阶段 06 生成配图提示词：写入同目录 `_配图提示词.md`
 
-写作风格从 `../wechat-article-writer/writing_style.md` 选择（7 种内置风格）。
+写作风格从 `../wechat-article-writer/writing_style.md` 选择（7 种内置风格）。排版脚本的 `--style` 只用 `warm|professional|daily|lively`；不要传写作风格编号。
 
 **门禁：** 标题、框架、成稿三个点都要让用户确认，不要一口气写到底再问。
 
@@ -191,7 +191,7 @@ node scripts/md-to-wechat-html.js --input "<ARTICLES_DIR>/文章.md" --output "<
 
 风格选择：
 
-- 情感/故事/卡兹克文风 → `warm`
+- 情感/故事/叙事文风 → `warm`
 - 干货/教程/观点/深度长文 → `professional`
 - 资讯日报 → `daily`
 - 轻松幽默 → `lively`

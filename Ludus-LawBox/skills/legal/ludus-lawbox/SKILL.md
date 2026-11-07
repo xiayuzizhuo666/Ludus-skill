@@ -15,7 +15,15 @@ metadata:
 
 把 LawBox 的 58 个中国法律工作技能收成一个入口：先由「法律工作总控」识别任务与事项，再按需读取子技能；简单问答走 L0，复杂事项才建 Matter Model、做反向复核、走正式交付门禁。它不替代律师，也不把模型记忆包装成已核验的法条或案例。
 
-## 首次启用声明
+## When to Use
+
+- 法律咨询、案件办理、诉讼/仲裁、刑事辩护、劳动争议、破产、合同审查/起草、产品法务、广告/食品标签/监管合规。
+- 法律文书起草、证据目录、法律意见、案件分析、法规案例检索、诉讼可视化。
+- 用户提交案件材料、合同、判决书、聊天记录、转账记录，要求判断风险、下一步或文书。
+- 不适用：要求直接跳过材料读取/法规核验出正式意见、要求伪造证据或规避法律、要求代替律师签字或对外发送。
+
+
+### 首次启用声明
 
 > 本 Skill 提供法律工作辅助，不构成正式法律意见。
 >
@@ -27,25 +35,18 @@ metadata:
 
 同一会话只展示一次；已展示过就不再重复。
 
-## When to Use
-
-- 法律咨询、案件办理、诉讼/仲裁、刑事辩护、劳动争议、破产、合同审查/起草、产品法务、广告/食品标签/监管合规。
-- 法律文书起草、证据目录、法律意见、案件分析、法规案例检索、诉讼可视化。
-- 用户提交案件材料、合同、判决书、聊天记录、转账记录，要求判断风险、下一步或文书。
-- 不适用：要求直接跳过材料读取/法规核验出正式意见、要求伪造证据或规避法律、要求代替律师签字或对外发送。
-
 ## Prerequisites
 
-- 上游 58 个技能已随包分发：`references/_vendor/lawbox/skills/legal/`。
+- 上游 58 个技能已随包分发：`references/_vendor/lawbox/skills/legal/`；另有可选的 `cn-law-hub` 核验层，不计入 58。
 - Python 3.9+。核心脚本多数只用标准库；正式 `.docx` 导出需要 `python-docx`；PDF 材料处理可能需要 `pymupdf`；OCR/法条转 Markdown 可能需要 MinerU 或外部服务。
-- 不需要网络也能做路由和纯文本分析；法条/案例核验需要 `web_search`/`web_extract`，或可选的 `references/_vendor/cn-law-hub/`。
+- 不需要网络也能做路由和纯文本分析；法条/案例核验优先读 `references/_vendor/lawbox/skills/legal/法律工作总控/references/pkulaw-mcp-legal-verification-protocol.md`，默认优先 Pkulaw MCP/API；不可用时用 `references/_vendor/cn-law-hub/`；再回退 `web_search`/`web_extract`。
 - 正式交付前确认 `LEGAL_WORKSPACE` 指到用户事项目录；`LEGAL_CURRENT_MATTER` 可选。不要用技能目录当工作区。
 
 ## How to Run
 
 1. 读 `references/INDEX.md` 和 `references/PATHS.md`，确认 vendor 根：`references/_vendor/lawbox/`。
 2. 读 `references/_vendor/lawbox/skills/legal/法律工作总控/SKILL.md`，按它的路由表选择子技能；需要原版入口时读 `references/_vendor/lawbox/upstream-root-SKILL.md`。
-3. 按 `## Procedure` 先分级、再澄清、再核验、再起草；正式交付物走硬闸门。
+3. 按 `## Procedure` 先分级、再澄清、再核验、再起草；正式交付物走硬闸门。LawBox 文档中的 `skills/legal/...` 一律映射到 `references/_vendor/lawbox/skills/legal/...`，不要按字面路径读取。
 4. 运行脚本前先运行 `python scripts/show_vendor_paths.py` 核对路径；需要 cwd 的脚本以 vendor 根为工作目录。
 5. 输出按 `## Verification` 自检，并保留来源边界。
 
@@ -61,6 +62,7 @@ metadata:
 | 合同与产品法务 | 合同审查、合同起草、委托合同管理、产品法务 | `references/INDEX.md` |
 | 合规 | 广告合规、预包装食品标签、监管合规监测 | `references/INDEX.md` |
 | 文书与工具 | 出稿前审查、模板与导出、专业文档、沟通记录、去 AI 味、法规检索、转 Markdown | `references/INDEX.md` |
+| 法规核验协议（Pkulaw 优先） | 北大法宝/回退链 | `references/_vendor/lawbox/skills/legal/法律工作总控/references/pkulaw-mcp-legal-verification-protocol.md` |
 | 法规/案例在线核验（增强） | cn-law-hub | `references/_vendor/cn-law-hub/SKILL.md` |
 | 路径与 cwd | 路径映射、env、脚本入口 | `references/PATHS.md` |
 | 出稿前审查 | preflight_check | `references/_vendor/lawbox/skills/legal/法律文书出稿前审查/scripts/preflight_check.py` |
@@ -81,13 +83,14 @@ metadata:
    - 只问 `Blocking Unknown`；排序：Decision > Scope > Evidence > Output > Formatting。
    - 能从材料或检索确定的，不要问用户。
 4. **法律核验（完成标准：关键法条/案例有名称、编号、内容、时效核验记录）**
-   - 不得用模型记忆写法条；用 `web_search`/`web_extract` 或 `references/_vendor/cn-law-hub/`。
-   - 形成「法规校验摘要」；查不到就标未核验，不要补造。
+   - 不得用模型记忆写法条；先读 `references/_vendor/lawbox/skills/legal/法律工作总控/references/pkulaw-mcp-legal-verification-protocol.md`，默认优先 Pkulaw MCP/API；不可用时用 `references/_vendor/cn-law-hub/`；再回退 `web_search`/`web_extract`。
+   - 形成「法规校验摘要」，写明实际使用的核验层（Pkulaw / cn-law-hub / web_search）和未核验项；查不到就标未核验，不要补造。
 5. **反向复核与裁决（完成标准：L2/L3 有具体失败机制，不是泛化风险）**
    - 以证伪为目标：用户的法律关系命名可能错吗？有没有另一套事实解释？对方最强抗辩是什么？哪个事实/证据/要件失败会推翻结论？
    - 输出 Minimum Failure Set；Judgment 给 `PASS` / `CONDITIONAL` / `BLOCKED` 起草许可。`BLOCKED` 不得进入正式起草。
 6. **正式交付（完成标准：成果类型分类 + 对应硬闸门全部通过）**
-   - 先分类：工作草稿、律师内部报告、提交法院/客户正式材料、Word 正式交付物。
+   - 先读 `references/_vendor/lawbox/skills/legal/法律工作总控/SKILL.md` 的「正式交付物硬闸门」，按 7 类分类：工作草稿、律师内部报告、提交法院/客户正式材料、飞书正式交付物、图片正式交付物、修订稿正式交付物、Word正式交付物。
+   - 飞书、图片、修订稿、Word 分别走对应强制链路；多个正式版本必须做「全部正式交付版本终检」。
    - `.docx` 必须过 `preflight_check.py` → `html_to_docx.py` → `health_check.py`；禁止用 `pandoc md -> docx` 代替。
    - 引用材料要有读取复查摘要；引用法规要有法规校验摘要；输出要有来源边界记录。
 7. **外部动作（完成标准：有用户明确授权记录）**
@@ -111,9 +114,10 @@ metadata:
 - [ ] 已写出推理等级 L0–L3 及理由；L0 没有被强行升级。
 - [ ] 事实都带认知状态，用户主张没有被写成无条件事实。
 - [ ] 只问了 Blocking Unknown，单轮 1–5 个。
+- [ ] 法规校验摘要写明 Pkulaw / cn-law-hub / web_search 的实际核验层，以及未核验项。
 - [ ] 关键法条/案例有名称、编号、内容、时效核验记录，或明确标未核验。
 - [ ] L2/L3 有具体 Minimum Failure Set 和 Judgment/起草许可。
-- [ ] 正式交付物已分类，并通过对应硬闸门（preflight、模板、来源边界、health check）。
+- [ ] 正式交付物按 7 类分类；飞书/图片/修订稿/Word 对应链路与「全部正式交付版本终检」均已完成。
 - [ ] 外部动作有用户明确授权；没有授权就只给计划。
 - [ ] 内部推理产物没有进入正式文书。
 - [ ] 路径映射正确：vendor 根、`LEGAL_WORKSPACE`、脚本 cwd 都已核对。
@@ -123,4 +127,4 @@ metadata:
 - 本技能提供法律工作辅助，不构成正式法律意见；最终事实认定、法律适用、诉讼策略和正式文书由律师/法务复核。
 - 不替代律师、法务、法官或具备相应资格的专业人士；不承诺诉讼结果。
 - 没有真实连接的利益冲突库、商业数据库、飞书/法院系统，标记“未执行/需人工确认”，不假装完成。
-- LawBox 新增内容为非商用许可；本包按个人/内部使用构建，公开再分发前需完成合规复查。详见 `references/_vendor/lawbox/THIRD_PARTY_NOTICES.md` 和 `references/_vendor/lawbox/LICENSE`。
+- 新增封装/入口为非商用许可（PolyForm Noncommercial 1.0.0）；商业使用需取得授权。上游 LawBox 内容按其原许可证（PolyForm NC / MIT）保留，`cn-law-hub` 为 Apache-2.0。详见 `references/_vendor/lawbox/THIRD_PARTY_NOTICES.md` 和 `references/_vendor/lawbox/LICENSE`。

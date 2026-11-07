@@ -17,6 +17,8 @@
 | 选题 | `python references/_vendor/wechat/skills/wechat-topic-selector/topic_selector.py -d "方向" --top 3 --output "<ARTICLES_DIR>/topic_results.json"` |
 | 配图 | `python references/_vendor/wechat/skills/wechat-article-writer/scripts/generate_images.py --input "<ARTICLES_DIR>/prompts.jsonl" --out "<ARTICLES_DIR>/images"` |
 | 排版 | `node references/_vendor/wechat/skills/wechat-publisher/scripts/md-to-wechat-html.js --input "<ARTICLES_DIR>/文章.md" --output "<ARTICLES_DIR>/文章.html" --style warm` |
+
+> 排版脚本的 `--style` 只接受 `warm|professional|daily|lively`；不要传写作风格编号。配图脚本自动读取 `<ARTICLES_DIR>/image.env`，也可 `--env-file`。
 | 草稿上传（推荐包装器） | `python scripts/run_wechat.py --html "<ARTICLES_DIR>/文章.html" --title "标题" --author "作者"` |
 | 草稿上传（直接脚本） | `node references/_vendor/wechat/skills/wechat-publisher/scripts/upload-draft.js --html "<ARTICLES_DIR>/文章.html" --title "标题" --author "作者" --config "<WECHAT_CONFIG>"` |
 

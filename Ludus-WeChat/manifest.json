@@ -2,7 +2,6 @@
   "package": "Ludus-WeChat",
   "version": "1.0.0",
   "licenseSummary": "PolyForm-Noncommercial-1.0.0 (original WeChat content and self-authored writer) AND MIT (wechat-topic-selector and enhancement) AND ISC (wechat-publisher)",
-  "internalUseOnly": false,
   "compliancePassRequired": false,
   "upstream": [
     {
@@ -44,12 +43,6 @@
       "reason": "upstream had no LICENSE file",
       "license": "PolyForm-Noncommercial-1.0.0",
       "path": "references/_vendor/wechat/skills/wechat-article-writer"
-    }
-  ],
-  "removed": [
-    {
-      "name": "khazix-writer",
-      "reason": "upstream had no LICENSE file; not included"
     }
   ],
   "commercialUseRequiresPermission": true,

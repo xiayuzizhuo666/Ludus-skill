@@ -56,7 +56,7 @@ node scripts/upload-draft.js --appid your-appid --secret your-appsecret --save-c
 node scripts/md-to-wechat-html.js --input article.md --output article.html --style warm
 ```
 
-`--style` 支持 `daily`、`warm`、`professional`、`lively`，也支持写作风格编号 `1-8`。
+`--style` 只接受 `daily`、`warm`、`professional`、`lively`；数字编号已废弃，传入会报错。
 
 ### Step 3: 上传正文图片
 
@@ -99,7 +99,7 @@ node scripts/upload-draft.js --html article.html --title "标题" --author "作�
 | 风格名 | 配色 | 适用写作风格 |
 |:-------|:-----|:-------------|
 | `daily`（日报风） | 品牌蓝 #0EA5E9 + 橙 #f59e0b | ⑥资讯日报主义（默认） |
-| `warm`（温暖风） | 暖橙红 #E8633C + 琥珀 | ①情感共鸣主义、⑦卡兹克文风 |
+| `warm`（温暖风） | 暖橙红 #E8633C + 琥珀 | ①情感共鸣主义、⑦情感叙事文风 |
 | `professional`（专业风） | 深蓝 #1E40AF + 棕橙 | ②干货教程、③观点评论、⑤深度长文 |
 | `lively`（活泼风） | 紫色 #7C3AED + 橙 | ④轻松幽默主义 |
 

@@ -10,7 +10,7 @@
 - Included: `skills/` (26 个 `SKILL.md`), `docs/USAGE.md`, `README.md`, `LICENSE`, `THIRD-PARTY-NOTICES.md`, `templates/accounting-ledger.md`.
 - Excluded: `install.mjs`, `validate.mjs`, `AGENTS.md`, `CHANGELOG.md`, `VERSION`, `docs/INSTALL.md`, `docs/UPSTREAM-README.md`.
 - Original license: `references/_vendor/accounting/LICENSE` (MIT).
-- Dual licensing: the current maintainers additionally license the original accounting content in this package under PolyForm NC; the upstream MIT license remains available for the upstream snapshot. MIT rights already granted cannot be revoked.
+- Dual licensing: the current maintainers license the new packaging and other original additions under PolyForm NC; the upstream accounting texts remain MIT and are not claimed as original content. MIT rights already granted cannot be revoked.
 
 ## 2. 本包新增内容
 

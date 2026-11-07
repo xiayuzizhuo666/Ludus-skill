@@ -9,7 +9,7 @@
  *   node md-to-wechat-html.js --input article.md --output article.html [--style daily|warm|professional|lively]
  * 
  * 如果不指定 --style，默认使用日报风（daily）。
- * --style 也可以传写作风格编号（1-8），会自动映射到对应视觉风格。
+ * 只接受命名风格 daily|warm|professional|lively；数字编号已废弃。
  */
 
 const fs = require('fs');
@@ -194,7 +194,7 @@ function main() {
   const opts = parseArgs();
   if (!opts.input || !opts.output) {
     console.log(JSON.stringify({
-      usage: 'node md-to-wechat-html.js --input article.md --output article.html [--style daily|warm|professional|lively|1-8] [--title "标题"]'
+      usage: 'node md-to-wechat-html.js --input article.md --output article.html [--style daily|warm|professional|lively] [--title "标题"]'
     }, null, 2));
     process.exit(0);
   }
@@ -206,10 +206,10 @@ function main() {
   let style;
   const styleArg = opts.style || 'daily';
   if (/^[1-8]$/.test(styleArg)) {
-    style = getVisualStyle(parseInt(styleArg));
-  } else {
-    style = getStyleByName(styleArg);
+    console.error('数字风格编号已废弃；请使用 daily|warm|professional|lively。');
+    process.exit(1);
   }
+  style = getStyleByName(styleArg);
 
   const C = style.colors;
   const noSummary = style.summaryBorder === 'none';

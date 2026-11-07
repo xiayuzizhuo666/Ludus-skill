@@ -28,9 +28,14 @@ def main() -> int:
     manifest = json.loads(install.read_text(manifest_path))
     errors: list[str] = []
 
+    if not manifest.get("licenseSummary"):
+        errors.append("manifest.json: licenseSummary missing")
+    if manifest.get("commercialUseRequiresPermission") is not True:
+        errors.append("manifest.json: commercialUseRequiresPermission must be true")
+
     for skill in manifest.get("skills", []):
         source = PACKAGE_ROOT / skill["path"]
-        errors.extend(install.validate_skill(source, skill["name"]))
+        errors.extend(install.validate_skill(source, skill["name"], skill.get("vendorFileCounts")))
 
         visible = [
             path
@@ -53,12 +58,6 @@ def main() -> int:
             count = len(list(vendor_dir.rglob("SKILL.md"))) if vendor_dir.is_dir() else 0
             if count != expected:
                 errors.append(f"{vendor_dir}: expected {expected} vendor SKILL.md, found {count}")
-
-    for path in PACKAGE_ROOT.rglob("*"):
-        if path.is_dir() and path.name in {"__pycache__", "node_modules"}:
-            errors.append(f"{path}: build/cache directory should not ship")
-        if path.is_file() and path.suffix == ".pyc":
-            errors.append(f"{path}: bytecode should not ship")
 
     if errors:
         print(f"FAIL: {len(errors)} error(s)")

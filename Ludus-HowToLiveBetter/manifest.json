@@ -2,7 +2,6 @@
   "package": "Ludus-HowToLiveBetter",
   "version": "1.0.0",
   "licenseSummary": "PolyForm-Noncommercial-1.0.0 (original packaging) AND CC-BY-4.0 (book text) AND MIT (upstream code and enhancement code)",
-  "internalUseOnly": false,
   "compliancePassRequired": false,
   "upstream": [
     {
@@ -27,7 +26,10 @@
       "category": "leisure",
       "path": "skills/leisure/ludus-howtolivebetter",
       "vendor": "references/_vendor/hltb",
-      "enhancementVendor": "references/_vendor/hltb-enhancements"
+      "enhancementVendor": "references/_vendor/hltb-enhancements",
+      "vendorFileCounts": {
+        "references/_vendor/hltb/book/*.md": 34
+      }
     }
   ],
   "schemaVersion": 1,

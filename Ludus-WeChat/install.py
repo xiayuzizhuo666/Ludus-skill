@@ -10,18 +10,19 @@ import shutil
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from uuid import uuid4
 
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 FORBIDDEN_TOP_LEVEL = {"README.md", "CHANGELOG.md", "install.sh", ".env", ".env.example", ".gitignore"}
-LINK_RE = re.compile(r"(?<![\w/])((?:references|templates|assets)/[^\s`'\"，。；)）\]}]+)")
-TEXT_SUFFIXES = {".md", ".py", ".js", ".mjs", ".json", ".yaml", ".yml", ".txt", ".ps1", ".bat", ".csv"}
+LINK_RE = re.compile(r"(?<![\w/])((?:references|templates|assets|scripts)/[^\s`'\"，。；)）\]}]+)")
+TEXT_SUFFIXES = {".md", ".py", ".js", ".mjs", ".json", ".yaml", ".yml", ".txt", ".ps1", ".bat", ".csv", ".html"}
 IGNORE = shutil.ignore_patterns("__pycache__", "*.pyc", ".git", "node_modules", ".DS_Store")
 SECRET_PATTERNS = [
     re.compile(r"sk-[A-Za-z0-9]{16,}"),
     re.compile(r"AKIA[0-9A-Z]{16}"),
     re.compile(r"ghp_[A-Za-z0-9]{20,}"),
-    re.compile(r"C:\\\\Users\\\\", re.IGNORECASE),
+    re.compile(r"(?<![A-Za-z0-9])[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s]+", re.IGNORECASE),
     re.compile(r"-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----"),
     re.compile(r"appsecret\s*[:=]\s*['\"]?[0-9a-fA-F]{32}"),
 ]
@@ -79,7 +80,11 @@ def scan_secrets(path: Path) -> list[str]:
     return hits
 
 
-def validate_skill(skill_dir: Path, expected_name: str) -> list[str]:
+def validate_skill(
+    skill_dir: Path,
+    expected_name: str,
+    vendor_file_counts: dict[str, int] | None = None,
+) -> list[str]:
     errors: list[str] = []
     skill_md = skill_dir / "SKILL.md"
     if not skill_md.is_file():
@@ -103,6 +108,10 @@ def validate_skill(skill_dir: Path, expected_name: str) -> list[str]:
             errors.append(f"{skill_md}: description must end with a period")
         if "## When to Use" not in body:
             errors.append(f"{skill_md}: missing '## When to Use'")
+        else:
+            first_h2 = re.search(r"^## +(.+)$", body, re.M)
+            if first_h2 and first_h2.group(1).strip() != "When to Use":
+                errors.append(f"{skill_md}: first H2 should be 'When to Use'")
     if len(text) > 100_000:
         errors.append(f"{skill_md}: {len(text)} chars exceeds 100000")
     for forbidden in FORBIDDEN_TOP_LEVEL:
@@ -112,6 +121,16 @@ def validate_skill(skill_dir: Path, expected_name: str) -> list[str]:
         target = skill_dir / link
         if not target.exists():
             errors.append(f"{skill_md}: referenced path does not exist: {link}")
+    refs_dir = skill_dir / "references"
+    if refs_dir.is_dir():
+        for ref in sorted(refs_dir.glob("*.md")):
+            for link in extract_links(read_text(ref)):
+                if not (skill_dir / link).exists():
+                    errors.append(f"{ref}: referenced path does not exist: {link}")
+    for pattern, expected in (vendor_file_counts or {}).items():
+        actual = len(list(skill_dir.glob(pattern)))
+        if actual != expected:
+            errors.append(f"{skill_dir}: vendor file count for '{pattern}' is {actual}, expected {expected}")
     for path in iter_files(skill_dir):
         if path.stat().st_size > 1_048_576:
             errors.append(f"{path}: file exceeds 1 MiB")
@@ -139,7 +158,7 @@ def load_manifest() -> dict:
 def list_package(manifest: dict) -> None:
     print(f"{manifest.get('package')} {manifest.get('version')}")
     print(f"license: {manifest.get('licenseSummary', '')}")
-    print(f"internal use only: {manifest.get('internalUseOnly', False)}")
+    print(f"commercial use requires permission: {manifest.get('commercialUseRequiresPermission', False)}")
     for skill in manifest.get("skills", []):
         print(f"  {skill['category']}/{skill['name']} -> {skill['path']}")
 
@@ -154,7 +173,6 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--list", action="store_true", help="List skills in this package")
     parser.add_argument("--dry-run", action="store_true", help="Validate and print the install plan")
-    parser.add_argument("--force", action="store_true", help="Overwrite an existing install after backup")
     parser.add_argument("--target", help="Skills directory, e.g. ~/.ludus/skills")
     args = parser.parse_args()
 
@@ -164,6 +182,12 @@ def main() -> int:
         return 0
 
     skills_dir = resolve_skills_dir(args.target)
+    if skills_dir.name.lower() != "skills":
+        print(
+            f"Warning: target '{skills_dir}' does not look like a Ludus skills directory "
+            "(expected a directory named 'skills').",
+            file=sys.stderr,
+        )
     backup_root = skills_dir.parent / "skill-backups"
     all_errors: list[str] = []
     plan: list[tuple[Path, Path]] = []
@@ -171,7 +195,7 @@ def main() -> int:
     for skill in manifest.get("skills", []):
         source = PACKAGE_ROOT / skill["path"]
         destination = skills_dir / skill["category"] / skill["name"]
-        errors = validate_skill(source, skill["name"])
+        errors = validate_skill(source, skill["name"], skill.get("vendorFileCounts"))
         all_errors.extend(errors)
         plan.append((source, destination))
         status = "OK" if not errors else f"{len(errors)} error(s)"
@@ -189,13 +213,11 @@ def main() -> int:
             print(f"  {source} -> {destination}")
         return 0
 
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     for source, destination in plan:
         if destination.exists():
-            if not args.force:
-                print(f"Replacing existing skill after backup: {destination} (pass --force to acknowledge)")
             backup_root.mkdir(parents=True, exist_ok=True)
-            backup = backup_root / f"{destination.name}-{timestamp}"
+            backup = backup_root / f"{destination.name}-{timestamp}-{uuid4().hex[:8]}"
             shutil.move(str(destination), str(backup))
             print(f"Backed up existing skill to {backup}")
         destination.parent.mkdir(parents=True, exist_ok=True)

@@ -99,7 +99,7 @@ license: PolyForm-Noncommercial-1.0.0
 - 正文信息图 2–3 张：每张只表达一个观点。
 - 结尾引导图 1 张（可选）：1:1。
 
-提示词写法见 `references/image-prompt-guide.md`。生成图片前必须让用户确认费用；没有 `ZHIPU_API_KEY` 时让用户手动配图或跳过。
+提示词写法见 `references/image-prompt-guide.md`。生成图片前必须让用户确认费用；脚本会自动读取 `<ARTICLES_DIR>/image.env`，也可 `--env-file` 指定；没有 `ZHIPU_API_KEY` 时让用户手动配图或跳过。
 
 完成标准：提示词文件存在，每张图有用途、尺寸、画面描述和禁止项。
 

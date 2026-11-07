@@ -1,10 +1,10 @@
 # License
 
-All original content in this package, including the packaging, entry skill, routing documents, READMEs, and the 26 accounting skill texts authored by the current maintainers, is licensed under the PolyForm Noncommercial License 1.0.0 below. Commercial use requires a separate license.
+The new packaging, entry skill, routing documents, READMEs, and other original additions in this package are licensed under the PolyForm Noncommercial License 1.0.0 below. Commercial use requires a separate license.
+
+The 26 upstream `china-accounting-skills` texts remain under the MIT license (© 2026 kylin985ti); the current maintainers do not claim authorship of them. Their MIT license text is retained for compliance.
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
-
-The upstream MIT license text is retained for attribution and compliance for the upstream snapshot. No upstream content is removed; the original license texts are retained for compliance. See `THIRD-PARTY-NOTICES.md` and `references/_vendor/accounting/LICENSE`.
 
 ---
 

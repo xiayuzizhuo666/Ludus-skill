@@ -25,6 +25,8 @@
 | `LICENSE` | `references/_vendor/lawbox/LICENSE` |
 | `THIRD_PARTY_NOTICES.md` | `references/_vendor/lawbox/THIRD_PARTY_NOTICES.md` |
 
+`packs/`、`plugin-skills/` 未随包分发；本包不支持 domain packs。`knowledge/lessons.md` 是上游只读快照；任务后的反思写入用户工作区，不回写 vendor。
+
 ## 脚本为什么不用改路径
 
 上游脚本从脚本文件本身推导目录。以 `法律文书出稿前审查/scripts/preflight_check.py` 为例：

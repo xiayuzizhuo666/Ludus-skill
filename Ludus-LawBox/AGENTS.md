@@ -13,4 +13,4 @@
 
 ## 许可
 
-原创 LawBox 内容（含封装/入口）PolyForm NC；上游 MIT 许可证文本保留；`cn-law-hub` Apache-2.0。公开仓库保留 NC 声明；商业使用需授权。
+新增封装/入口/路由 PolyForm NC；上游 LawBox 内容按其原许可证（PolyForm NC / MIT）保留；`cn-law-hub` Apache-2.0；商业使用需授权。

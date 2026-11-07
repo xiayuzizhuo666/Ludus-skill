@@ -51,9 +51,9 @@ Ludus-china-accounting-suite/
 
 ## 许可
 
-原创会计内容（封装/入口/路由/测试/文档与 26 个技能正文）PolyForm Noncommercial 1.0.0；上游 MIT 许可证文本保留。
+新增封装/入口/路由/测试/文档 PolyForm Noncommercial 1.0.0；上游 26 个技能正文 MIT（© 2026 kylin985ti），许可证文本保留。
 
-非商用；商业使用需取得授权。上游/第三方组件保留其原许可证；保留上游 `LICENSE` 与 `THIRD-PARTY-NOTICES.md`。
+非商用；商业使用新增内容需取得授权。上游组件保留其原许可证；保留上游 `LICENSE` 与 `THIRD-PARTY-NOTICES.md`。
 
 商业授权请联系：https://github.com/xiayuzizhuo666 。
 

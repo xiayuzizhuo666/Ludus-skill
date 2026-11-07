@@ -1,6 +1,6 @@
 # 会计总账
 
-> 空白模板。复制到工作区 `memory/accounting-ledger.md` 后填写。
+> 空白模板。复制到 `<ACCOUNTING_WORKSPACE>/memory/accounting-ledger.md` 后填写；不要把真实账目写进技能目录。
 > 本文件包含企业敏感财务信息，不要提交到版本库或公开分享。
 
 ## 企业档案

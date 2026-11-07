@@ -15,15 +15,16 @@
 - License: ISC
 - Vendored at: `skills/social-media/ludus-wechat/references/_vendor/wechat/skills/wechat-publisher/`
 - Original license: `references/_vendor/wechat/skills/wechat-publisher/LICENSE`.
-- Modification: path references and config defaults adapted by `scripts/run_wechat.py`; upstream body unchanged.
+- Modification: path references and config defaults adapted by `scripts/run_wechat.py`; style CLI rejects deprecated numeric style labels; one stale style label was renamed. Upstream logic otherwise unchanged.
 
 ## 3. wechat-article-writer (self-authored replacement)
 
 - Upstream ClawHub version had **no LICENSE file** and is **not included** in this package.
+- The separate `wechat-official-account-suite` MIT packaging is not the same artifact; this note refers to the ClawHub original.
 - The `wechat-article-writer/` directory is a new, self-authored PolyForm Noncommercial 1.0.0 implementation of the six-stage writing workflow, title patterns, frameworks, style guide and image-prompt guide.
 - License: PolyForm Noncommercial 1.0.0, same as this package's new content.
 - Files: `SKILL.md`, `writing_style.md`, `references/`, `scripts/generate_images.py`, `scripts/image.env.example`.
-- No upstream text, examples or scripts from the no-license version are retained.
+- No upstream text, examples or scripts from the no-license ClawHub version are retained.
 
 ## 4. wechat-article-pipeline
 

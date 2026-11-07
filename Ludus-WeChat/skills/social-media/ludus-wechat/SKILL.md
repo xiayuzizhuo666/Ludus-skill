@@ -25,7 +25,7 @@ metadata:
 ## Prerequisites
 
 - Node.js 18+、Python 3.8+。
-- 配图需要 `ZHIPU_API_KEY`；脚本用标准库 HTTP 调用智谱图片 API，无需额外 SDK。没有密钥就跳过配图或让用户手动提供图片。
+- 配图需要 `ZHIPU_API_KEY`；脚本用标准库 HTTP 调用智谱图片 API，无需额外 SDK。脚本会自动读取 `<ARTICLES_DIR>/image.env`（如果存在），也可 `--env-file` 指定。没有密钥就跳过配图或让用户手动提供图片。
 - 上传草稿需要 `WECHAT_APPID`、`WECHAT_APP_SECRET`，并把当前公网 IP 加入公众号后台白名单。
 - 建议设置 `WECHAT_ARTICLES_DIR`（文章/配图/HTML/状态文件目录）和 `WECHAT_CONFIG`（可写的配置文件路径，默认在用户配置目录，不在技能目录内）。
 - 上游内容已随包分发：`references/_vendor/wechat/skills/`；配置说明见 `references/_vendor/wechat/docs/CONFIG.md`。
@@ -78,7 +78,7 @@ metadata:
 6. **Stage 5 排版（完成标准：HTML 通过检查清单）**
    - 运行
      `node references/_vendor/wechat/skills/wechat-publisher/scripts/md-to-wechat-html.js --input "<ARTICLES_DIR>/文章.md" --output "<ARTICLES_DIR>/文章.html" --style warm`
-   - 风格：情感/故事/卡兹克 → `warm`；干货/教程/观点 → `professional`；资讯日报 → `daily`；轻松幽默 → `lively`。
+   - 风格：情感/故事/叙事 → `warm`；干货/教程/观点 → `professional`；资讯日报 → `daily`；轻松幽默 → `lively`。`--style` 只用这四个命名风格，不要传 `writing_style.md` 的 1–7 编号。
    - 检查：没有 `<style`、`<h1`、class；没有意外 `<ol>`；图片 `src` 稍后替换为微信图床 URL；HTML < 2MB。
    - 可选增强：读 `references/_vendor/wechat-enhancements/wechat-article-pipeline/README.md`，用手机预览/长截图/公开输出脱敏工具做二次检查。
 7. **Stage 6 上传草稿（完成标准：用户明确确认，且拿到 media_id）**

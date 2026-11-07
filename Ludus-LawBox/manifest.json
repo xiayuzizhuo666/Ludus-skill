@@ -1,8 +1,7 @@
 {
   "package": "Ludus-LawBox",
   "version": "1.0.0",
-  "licenseSummary": "PolyForm-Noncommercial-1.0.0 (original LawBox content and new packaging) AND Apache-2.0 (cn-law-hub); upstream MIT license retained",
-  "internalUseOnly": false,
+  "licenseSummary": "PolyForm-Noncommercial-1.0.0 (new packaging and upstream LawBox additions) AND MIT (upstream legal-skills, retained) AND Apache-2.0 (cn-law-hub)",
   "compliancePassRequired": false,
   "upstream": [
     {

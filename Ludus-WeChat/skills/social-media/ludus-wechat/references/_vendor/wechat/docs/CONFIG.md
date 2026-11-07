@@ -64,7 +64,7 @@ export ZHIPU_API_KEY="your-key"
 cp skills/wechat-article-writer/scripts/image.env.example "<ARTICLES_DIR>/image.env"
 ```
 
-然后填写 `ZHIPU_API_KEY`，并 source 该文件或直接设置环境变量。默认模型 `cogview-3`，尺寸按提示词文件里的 `size`。不要把真实密钥写进技能目录。
+`generate_images.py` 会自动读取 `<ARTICLES_DIR>/image.env`（如果存在），也可以 `--env-file` 指定。填写 `ZHIPU_API_KEY`；默认模型 `cogview-3`，尺寸按提示词文件里的 `size`。不要把真实密钥写进技能目录。
 
 ## 4. 视觉风格
 
@@ -78,9 +78,11 @@ export WECHAT_DEFAULT_STYLE="warm"
 
 | 内容类型 | 风格 |
 |---|---|
-| 情感、故事、卡兹克文风 | `warm` |
+| 情感、故事、叙事文风 | `warm` |
 | 干货、教程、观点、深度长文 | `professional` |
 | 资讯日报 | `daily` |
+
+> `--style` 只接受命名风格 `warm|professional|daily|lively`；不要传写作风格编号。
 | 轻松幽默 | `lively` |
 
 ## 5. 落款

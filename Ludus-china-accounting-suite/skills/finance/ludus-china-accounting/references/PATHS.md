@@ -28,11 +28,12 @@
 | 使用说明 | `references/_vendor/accounting/docs/USAGE.md` |
 | 空白总账模板 | `templates/accounting-ledger.md` |
 
-## 数据连续性
+## 工作区与数据连续性
 
-- 如果工作区存在 `memory/accounting-ledger.md`，先读企业档案、历史凭证和报表快照。
+- `ACCOUNTING_WORKSPACE`：用户工作区根目录。`memory/accounting-ledger.md` 相对于它解析；未设置时以用户当前工作目录为根，不要用技能目录。
+- 如果 `<ACCOUNTING_WORKSPACE>/memory/accounting-ledger.md` 存在，先读企业档案、历史凭证和报表快照。
 - 只有用户确认后才更新；不要在无关对话中暴露企业敏感财务信息。
-- 需要新建账套时，先把 `templates/accounting-ledger.md` 复制到工作区，再填写企业档案和准则选择。
+- 需要新建账套时，先把 `templates/accounting-ledger.md` 复制到 `<ACCOUNTING_WORKSPACE>/memory/accounting-ledger.md`，再填写企业档案和准则选择。
 
 ## 输出约定
 

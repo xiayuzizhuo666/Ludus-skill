@@ -28,7 +28,8 @@ metadata:
 - 上游 26 个技能已随包分发：`references/_vendor/accounting/skills/`。
 - 不需要网络和脚本依赖；所有内容为纯 Markdown。
 - 需要用户提供企业画像和资料：规模/年收入、纳税人类型、准则、会计期间、币种、金额单位，以及流水、发票、合同、银行对账单、工资表、折旧表等。
-- 如果工作区有 `memory/accounting-ledger.md`，先读；只有用户确认后才更新。
+- 工作区：设置 `ACCOUNTING_WORKSPACE`（或明确工作区根目录）；`memory/accounting-ledger.md` 相对于它解析，不要写进技能目录。
+- 如果 `<ACCOUNTING_WORKSPACE>/memory/accounting-ledger.md` 存在，先读；只有用户确认后才更新。未设置 `ACCOUNTING_WORKSPACE` 时以用户当前工作目录为根。
 
 ## How to Run
 
@@ -107,6 +108,7 @@ metadata:
 - [ ] 税务标明计税依据、税率/征收率、申报期；不确定项标「需复核」。
 - [ ] 审计标明程序、样本、发现、证据；没有伪造证据。
 - [ ] 结尾列出准则口径、关键假设、待补资料、需 CPA/税务师复核事项。
+- [ ] 同一期间的多份输出之间，净利润、未分配利润、现金余额三处引用数字一致。
 - [ ] 没有把真实企业敏感数据写进公开文件。
 
 ## Boundaries

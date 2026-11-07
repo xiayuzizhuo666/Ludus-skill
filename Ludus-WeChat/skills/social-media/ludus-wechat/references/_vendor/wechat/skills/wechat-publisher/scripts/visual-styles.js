@@ -39,7 +39,7 @@ const VISUAL_STYLES = {
 
   // ═══════════════════════════════════════
   // 风格 B: 温暖风
-  // 适用：①情感共鸣主义、⑦卡兹克文风
+  // 适用：①情感共鸣主义、⑦情感叙事文风
   // 特点：暖色系，柔和，适合讲故事
   // ═══════════════════════════════════════
   warm: {
@@ -130,9 +130,9 @@ const STYLE_MAP = {
   // ⑥ 资讯日报主义 → 日报风
   6: 'daily',
   '资讯日报': 'daily',
-  // ⑦ 卡兹克文风 → 温暖风
+  // ⑦ 情感叙事文风 → 温暖风
   7: 'warm',
-  '卡兹克': 'warm',
+  '情感叙事': 'warm',
   // ⑧ 自定义风格 → 日报风（默认）
   8: 'daily',
   '自定义': 'daily',
@@ -145,7 +145,8 @@ function getVisualStyle(writingStyleIndex) {
 }
 
 function getStyleByName(name) {
-  return VISUAL_STYLES[name] || VISUAL_STYLES.daily;
+  const mapped = STYLE_MAP[name] || name;
+  return VISUAL_STYLES[mapped] || VISUAL_STYLES.daily;
 }
 
 module.exports = { VISUAL_STYLES, STYLE_MAP, getVisualStyle, getStyleByName };

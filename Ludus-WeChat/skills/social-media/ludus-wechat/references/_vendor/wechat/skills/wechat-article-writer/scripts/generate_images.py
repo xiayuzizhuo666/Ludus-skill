@@ -111,6 +111,18 @@ def generate_one(item: dict, index: int, args: argparse.Namespace, api_key: str)
     raise RuntimeError(f"{image_id}: {last_error}")
 
 
+def load_env_file(path: Path) -> None:
+    for raw_line in path.read_text(encoding="utf-8-sig").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip("\"'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
 def main() -> int:
     try:
         sys.stdout.reconfigure(encoding="utf-8")
@@ -121,14 +133,33 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True, help="JSONL with id/prompt/size")
     parser.add_argument("--out", type=Path, default=Path("outputs"), help="Output directory")
-    parser.add_argument("--api-key", default=os.environ.get("ZHIPU_API_KEY", ""), help="Zhipu API key")
-    parser.add_argument("--model", default=os.environ.get("ZHIPU_IMAGE_MODEL", DEFAULT_MODEL))
+    parser.add_argument("--api-key", default=None, help="Zhipu API key")
+    parser.add_argument("--model", default=None, help="Image model")
+    parser.add_argument("--env-file", type=Path, default=None, help="Optional KEY=VALUE env file")
     parser.add_argument("--size", default=DEFAULT_SIZE, help="Default image size, e.g. 1024x1024")
     parser.add_argument("--endpoint", default=DEFAULT_ENDPOINT)
     parser.add_argument("--timeout", type=int, default=90)
     parser.add_argument("--retries", type=int, default=1)
     parser.add_argument("--dry-run", action="store_true", help="Print requests without calling the API")
     args = parser.parse_args()
+
+    env_file = args.env_file
+    if env_file is None:
+        articles_dir = os.environ.get("WECHAT_ARTICLES_DIR")
+        if articles_dir:
+            candidate = Path(articles_dir) / "image.env"
+            if candidate.is_file():
+                env_file = candidate
+    if env_file is not None:
+        if not env_file.is_file():
+            print(f"Env file not found: {env_file}", file=sys.stderr)
+            return 1
+        load_env_file(env_file)
+        print(f"Loaded env file: {env_file}", file=sys.stderr)
+
+    api_key = args.api_key or os.environ.get("ZHIPU_API_KEY", "")
+    model = args.model or os.environ.get("ZHIPU_IMAGE_MODEL", DEFAULT_MODEL)
+    args.model = model
 
     if not args.input.is_file():
         print(f"Input not found: {args.input}", file=sys.stderr)
@@ -141,15 +172,15 @@ def main() -> int:
     if not prompts:
         print("No prompts found.", file=sys.stderr)
         return 1
-    if not args.dry_run and not args.api_key:
-        print("ZHIPU_API_KEY is required (or pass --api-key).", file=sys.stderr)
+    if not args.dry_run and not api_key:
+        print("ZHIPU_API_KEY is required (or pass --api-key / --env-file).", file=sys.stderr)
         return 1
 
     args.out.mkdir(parents=True, exist_ok=True)
     failures = []
     for index, item in enumerate(prompts, 1):
         try:
-            destination = generate_one(item, index, args, args.api_key)
+            destination = generate_one(item, index, args, api_key)
             print(f"OK {destination}")
         except Exception as exc:
             failures.append(str(exc))

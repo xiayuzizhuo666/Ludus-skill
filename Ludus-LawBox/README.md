@@ -51,9 +51,9 @@ Ludus-LawBox/
 
 ## 许可
 
-原创 LawBox 内容（封装/入口/路由/适配/测试/文档与维护者创作的技能正文）PolyForm Noncommercial 1.0.0；上游 MIT 许可证文本保留；`cn-law-hub` Apache-2.0。
+新增封装/入口/路由/适配/测试/文档 PolyForm Noncommercial 1.0.0；上游 LawBox 内容按其原许可证（PolyForm NC / MIT）保留；`cn-law-hub` Apache-2.0。
 
-**非商用许可**。原创 LawBox 内容按 PolyForm Noncommercial 1.0.0 授权；商业使用需另行取得授权。上游/第三方组件保留其原许可证。
+**非商用许可**。新增封装/入口按 PolyForm Noncommercial 1.0.0 授权；上游/第三方组件保留其原许可证；商业使用需另行取得授权。
 
 商业授权请联系：https://github.com/xiayuzizhuo666 。
 

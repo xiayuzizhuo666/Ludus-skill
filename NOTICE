@@ -6,8 +6,8 @@ distribution of all content owned by the maintainers:
 
 - the four entry skills, packaging, routing documents, adapter scripts, tests,
   and READMEs;
-- the original LawBox content;
-- the original accounting content;
+- the new packaging for LawBox and the upstream LawBox content distributed under PolyForm NC;
+- the new packaging for accounting;
 - the original WeChat suite content, including `wechat-pipeline` and the
   self-authored `wechat-article-writer`.
 
@@ -29,7 +29,9 @@ texts are retained under `references/_vendor/` for compliance:
   `wechat-article-pipeline` MIT.
 
 For LawBox and the accounting package, the upstream MIT license text remains
-available alongside the NC license. MIT rights already granted cannot be revoked.
+available alongside the NC license. The upstream LawBox/legal-skills and
+accounting texts remain under their original licenses and are not claimed as
+original content. MIT rights already granted cannot be revoked.
 If the copyright holders of the third-party components listed above also
 authorize NC, those components can be dual-licensed the same way.
 

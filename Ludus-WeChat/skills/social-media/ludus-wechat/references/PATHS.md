@@ -9,7 +9,7 @@
 │   ├── INDEX.md
 │   ├── PATHS.md
 │   └── _vendor/
-│       ├── wechat/                      # 上游 5 个技能 + 配置 + 文档
+│       ├── wechat/                      # 上游 4 个技能 + 配置 + 文档
 │       └── wechat-enhancements/         # 排版增强
 ├── scripts/
 │   └── run_wechat.py
@@ -38,6 +38,8 @@
   - macOS/Linux：`$XDG_CONFIG_HOME/ludus-wechat/wechat-config.json`，未设置时 `~/.config/ludus-wechat/wechat-config.json`
 - `scripts/run_wechat.py` 会在未设置 `WECHAT_CONFIG` 时使用上述默认路径，并把 `--config` 传给 `upload-draft.js`。
 - 配置模板：`templates/wechat-config.example.json`；复制后填写，不要把真实密钥提交到版本库。
+- 配图脚本自动读取 `<WECHAT_ARTICLES_DIR>/image.env`（如果存在），也可 `--env-file` 指定。
+- 排版脚本的 `--style` 只接受 `warm|professional|daily|lively`；不要传写作风格编号。
 
 ## 环境变量
 
