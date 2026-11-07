@@ -1,5 +1,7 @@
 # Ludus 外接扩展技能包
 
+[![validate](https://github.com/xiayuzizhuo666/Ludus-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/xiayuzizhuo666/Ludus-skill/actions/workflows/validate.yml)
+
 四个 Ludus 外接扩展包，每个包只注册一个入口技能，上游子技能全部放在 `references/_vendor/` 下按需读取。
 
 | 包 | 入口技能 | 领域 | 许可 |
