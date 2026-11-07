@@ -4,7 +4,7 @@ All original LawBox content in this package, including the packaging, entry skil
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
 
-The upstream MIT license text is retained for attribution and compliance for the upstream snapshot. The `cn-law-hub` enhancement remains under Apache-2.0. Third-party components remain under their original licenses. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
+The upstream MIT license text is retained for attribution and compliance for the upstream snapshot. The `cn-law-hub` enhancement remains under Apache-2.0. Third-party components remain under their original licenses. No upstream content is removed; the original license texts are retained for compliance. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
 
 ---
 

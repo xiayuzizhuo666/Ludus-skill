@@ -64,6 +64,8 @@ Ludus-<Domain>/
 
 ## 许可与分发
 
+本仓库不删除上游内容；PolyForm NC 是当前发行版的主许可，上游组件的原许可证文本保留在各自的 LICENSE/NOTICE 中。
+
 - `Ludus-HowToLiveBetter`：新增封装/入口/适配内容 PolyForm Noncommercial 1.0.0；书籍正文 CC BY 4.0；上游代码/增强 MIT + CC BY 4.0。再分发需保留署名与来源链接；商业使用新增内容需授权。
 - `Ludus-china-accounting-suite`：原创会计内容（含封装/入口/26 个技能正文）PolyForm Noncommercial 1.0.0；上游 MIT 许可证文本保留。商业使用需授权；保留上游 `LICENSE`。
 - `Ludus-LawBox`：原创 LawBox 内容（含封装/入口）PolyForm Noncommercial 1.0.0；上游 MIT 许可证文本保留；含 `cn-law-hub`（Apache-2.0）。**非商用；商业使用需另行取得授权。**

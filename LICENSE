@@ -4,7 +4,7 @@ The packaging, entry skills, routing documents, adapter scripts, tests, READMEs,
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
 
-The HowToLiveBetter book text remains CC BY 4.0. Third-party components remain under their original licenses; this file does not relicense them. See `NOTICE` and each package's `THIRD-PARTY-NOTICES.md`.
+The HowToLiveBetter book text remains CC BY 4.0. Third-party components remain under their original licenses; this file does not relicense them. No upstream content is deleted: the original license texts are retained under `references/_vendor/` for compliance. See `NOTICE` and each package's `THIRD-PARTY-NOTICES.md`.
 
 ---
 

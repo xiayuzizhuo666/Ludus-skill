@@ -1,40 +1,40 @@
 # Licensing notice
 
-This repository contains new packaging, entry skills, routing documents, adapter
-scripts, tests, and READMEs (the "new content") and vendored upstream components.
+This repository does **not** delete or replace the vendored upstream content.
+PolyForm Noncommercial License 1.0.0 is the primary license for the current
+distribution of all content owned by the maintainers:
 
-## New content
+- the four entry skills, packaging, routing documents, adapter scripts, tests,
+  and READMEs;
+- the original LawBox content;
+- the original accounting content;
+- the original WeChat suite content, including `wechat-pipeline` and the
+  self-authored `wechat-article-writer`.
 
-The new content is licensed under the PolyForm Noncommercial License 1.0.0.
-Commercial use of the new content requires a separate license from the copyright
-holder. See `LICENSE`.
+Commercial use of this content requires a separate license. Contact the
+repository owner via https://github.com/xiayuzizhuo666.
 
-For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
+## Retained upstream and third-party licenses
 
-## Vendored upstream components
-
-These components remain under their original licenses. This repository does not
-relicense them:
+These components are not relicensed by the maintainers. Their original license
+texts are retained under `references/_vendor/` for compliance:
 
 - `Ludus-HowToLiveBetter`: book text CC BY 4.0; upstream code and the
   `how-to-survive-unemployment` enhancement MIT/CC BY 4.0.
-- `Ludus-LawBox`: original LawBox content PolyForm Noncommercial 1.0.0;
-  upstream MIT license retained for the upstream snapshot; `cn-law-hub`
-  Apache-2.0.
-- `Ludus-china-accounting-suite`: original accounting content and packaging
-  PolyForm Noncommercial 1.0.0; upstream MIT license retained for the upstream
-  snapshot.
-- `Ludus-WeChat`: original WeChat suite content and the self-authored writer
-  PolyForm Noncommercial 1.0.0; `wechat-topic-selector` MIT;
-  `wechat-publisher` ISC; `wechat-article-pipeline` MIT.
+- `Ludus-LawBox`: upstream `legal-skills` MIT license text retained (dual
+  licensing); `cn-law-hub` Apache-2.0.
+- `Ludus-china-accounting-suite`: upstream `china-accounting-skills` MIT license
+  text retained (dual licensing).
+- `Ludus-WeChat`: `wechat-topic-selector` MIT; `wechat-publisher` ISC;
+  `wechat-article-pipeline` MIT.
 
-Dual licensing for LawBox and the accounting package: the current maintainers
-additionally license the original LawBox and accounting content under PolyForm
-NC; the upstream MIT licenses remain available for the upstream snapshots. MIT
-rights already granted cannot be revoked.
+For LawBox and the accounting package, the upstream MIT license text remains
+available alongside the NC license. MIT rights already granted cannot be revoked.
+If the copyright holders of the third-party components listed above also
+authorize NC, those components can be dual-licensed the same way.
 
-Because the upstream licenses permit their own commercial use, third parties may
-still use those upstream components under their original terms. The
-noncommercial restriction applies to the new content.
+Because the retained upstream licenses permit their own commercial use, third
+parties may still use those upstream components under their original terms. The
+noncommercial restriction applies to the content owned by the maintainers.
 
 No package includes real credentials, client materials, or case files.

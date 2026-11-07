@@ -4,7 +4,7 @@ The new packaging, entry skill, routing documents, adapter scripts, tests, and R
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
 
-Vendored upstream components remain under their original licenses: HowToLiveBetter book text CC BY 4.0, HowToLiveBetter code MIT, and `how-to-survive-unemployment` MIT + CC BY 4.0. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
+Vendored upstream components remain under their original licenses: HowToLiveBetter book text CC BY 4.0, HowToLiveBetter code MIT, and `how-to-survive-unemployment` MIT + CC BY 4.0. No upstream content is removed; the original license texts are retained for compliance. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
 
 ---
 

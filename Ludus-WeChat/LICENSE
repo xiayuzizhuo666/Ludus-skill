@@ -4,7 +4,7 @@ All original WeChat suite content in this package, including the packaging, entr
 
 For commercial licensing, contact the repository owner via https://github.com/xiayuzizhuo666.
 
-Third-party components remain under their original licenses: `wechat-topic-selector` MIT, `wechat-publisher` ISC, and `wechat-article-pipeline` MIT. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
+Third-party components remain under their original licenses: `wechat-topic-selector` MIT, `wechat-publisher` ISC, and `wechat-article-pipeline` MIT. No upstream content is removed; the original license texts are retained for compliance. See `THIRD-PARTY-NOTICES.md` and the LICENSE files under `references/_vendor/`.
 
 ---
 
