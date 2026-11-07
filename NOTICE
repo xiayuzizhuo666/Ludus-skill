@@ -1,0 +1,37 @@
+# Licensing notice
+
+This repository contains four independently licensed Ludus extension packs. The
+root README is a summary; the controlling texts are in each package.
+
+## Ludus-HowToLiveBetter
+
+- Book text: CC BY 4.0.
+- Code and packaging: MIT.
+- Includes `how-to-survive-unemployment` (MIT + CC BY 4.0).
+- See `Ludus-HowToLiveBetter/LICENSE` and `Ludus-HowToLiveBetter/THIRD-PARTY-NOTICES.md`.
+
+## Ludus-LawBox
+
+- LawBox additions: PolyForm Noncommercial 1.0.0 (noncommercial).
+- Upstream `legal-skills`: MIT.
+- `cn-law-hub`: Apache-2.0.
+- See `Ludus-LawBox/LICENSE`, `Ludus-LawBox/THIRD-PARTY-NOTICES.md`, and the
+  vendored licenses under `Ludus-LawBox/skills/legal/ludus-lawbox/references/_vendor/lawbox/`.
+
+## Ludus-china-accounting-suite
+
+- Upstream skills and packaging: MIT.
+- See `Ludus-china-accounting-suite/LICENSE` and
+  `Ludus-china-accounting-suite/THIRD-PARTY-NOTICES.md`.
+
+## Ludus-WeChat
+
+- Packaging and the self-authored `wechat-article-writer`: MIT.
+- `wechat-publisher`: ISC (magicx).
+- `wechat-topic-selector`: MIT.
+- The upstream `wechat-article-writer` and `khazix-writer` versions had no
+  LICENSE file and are not included.
+- See `Ludus-WeChat/LICENSE` and `Ludus-WeChat/THIRD-PARTY-NOTICES.md`.
+
+No package in this repository includes real credentials, client materials, or
+case files.

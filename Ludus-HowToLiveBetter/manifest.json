@@ -1,0 +1,35 @@
+{
+  "package": "Ludus-HowToLiveBetter",
+  "version": "1.0.0",
+  "licenseSummary": "CC-BY-4.0 (book text) AND MIT (code)",
+  "internalUseOnly": false,
+  "compliancePassRequired": false,
+  "upstream": [
+    {
+      "name": "HowToLiveBetter",
+      "repo": "https://github.com/eternity4719/HowToLiveBetter",
+      "ref": "snapshot-2026-11-07",
+      "treeSha256": "50473ec74590485306f45fd7ab08a7abe9bbfcc624a446d7766860bcd4e50d3e",
+      "license": "CC-BY-4.0 AND MIT"
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "how-to-survive-unemployment",
+      "repo": "https://github.com/AIPMAndy/how-to-survive-unemployment",
+      "ref": "9c337be2c65adca1f85d0e0c08484f0c886a6bb3",
+      "license": "MIT AND CC-BY-4.0"
+    }
+  ],
+  "skills": [
+    {
+      "name": "ludus-howtolivebetter",
+      "category": "leisure",
+      "path": "skills/leisure/ludus-howtolivebetter",
+      "vendor": "references/_vendor/hltb",
+      "enhancementVendor": "references/_vendor/hltb-enhancements"
+    }
+  ],
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-07T00:00:00+08:00"
+}

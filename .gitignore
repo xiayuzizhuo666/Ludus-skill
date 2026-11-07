@@ -1,0 +1,22 @@
+# Original upstream source folders (not part of the published extension packs)
+HowToLiveBetter-main/
+LawBox-main/
+china-accounting-suite/
+wechat-official-account-suite/
+
+# Local validation and build artifacts
+_ludus-agent/
+.tmp-*/
+.tmp-venv/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.gh-login.*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

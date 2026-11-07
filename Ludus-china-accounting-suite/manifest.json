@@ -1,0 +1,28 @@
+{
+  "package": "Ludus-china-accounting-suite",
+  "version": "1.0.0",
+  "licenseSummary": "MIT",
+  "internalUseOnly": false,
+  "compliancePassRequired": false,
+  "upstream": [
+    {
+      "name": "china-accounting-skills",
+      "repo": "https://github.com/kylin985ti/china-accounting-skills",
+      "ref": "snapshot-2026-11-07",
+      "treeSha256": "a54a5231f4c2d36d0dae690e14ce9a719eb85cdbc2e33dbdba976adee6490d8d",
+      "license": "MIT"
+    }
+  ],
+  "enhancements": [],
+  "skills": [
+    {
+      "name": "ludus-china-accounting",
+      "category": "finance",
+      "path": "skills/finance/ludus-china-accounting",
+      "vendor": "references/_vendor/accounting",
+      "vendorSkillCount": 26
+    }
+  ],
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-07T00:00:00+08:00"
+}

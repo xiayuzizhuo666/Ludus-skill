@@ -1,0 +1,36 @@
+{
+  "package": "Ludus-LawBox",
+  "version": "1.0.0",
+  "licenseSummary": "PolyForm-Noncommercial-1.0.0 (LawBox additions) AND MIT (upstream legal-skills)",
+  "internalUseOnly": false,
+  "compliancePassRequired": false,
+  "upstream": [
+    {
+      "name": "LawBox",
+      "repo": "https://github.com/Samwang-afk/LawBox",
+      "ref": "snapshot-2026-11-07",
+      "treeSha256": "644a16275233f9fe56b7d7acb82488557f720a25669a2dad9224f01694539add",
+      "license": "PolyForm-Noncommercial-1.0.0 AND MIT"
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "cn-law-hub",
+      "repo": "https://github.com/ZongziForu/cn-law-hub",
+      "ref": "8a62d5cbec94489dcb7a661dd0df411742a2a1e2",
+      "license": "Apache-2.0"
+    }
+  ],
+  "skills": [
+    {
+      "name": "ludus-lawbox",
+      "category": "legal",
+      "path": "skills/legal/ludus-lawbox",
+      "vendor": "references/_vendor/lawbox",
+      "vendorSkillCount": 58
+    }
+  ],
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-07T00:00:00+08:00",
+  "commercialUseRequiresPermission": true
+}

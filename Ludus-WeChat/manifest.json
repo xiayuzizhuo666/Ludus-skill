@@ -1,0 +1,55 @@
+{
+  "package": "Ludus-WeChat",
+  "version": "1.0.0",
+  "licenseSummary": "MIT AND ISC",
+  "internalUseOnly": false,
+  "compliancePassRequired": false,
+  "upstream": [
+    {
+      "name": "wechat-topic-selector",
+      "repo": "https://github.com/lucianaib0318/wechat-auto-publish",
+      "ref": "snapshot-2026-11-07",
+      "license": "MIT"
+    },
+    {
+      "name": "wechat-publisher (magicx-wechat-publisher)",
+      "repo": "ClawHub slug magicx-wechat-publisher 1.0.1",
+      "ref": "snapshot-2026-11-07",
+      "license": "ISC"
+    }
+  ],
+  "enhancements": [
+    {
+      "name": "wechat-article-pipeline",
+      "repo": "https://github.com/davinci-seven/wechat-article-pipeline",
+      "ref": "ab90abb602712099dd364c43b16f4d65cfe34d68",
+      "license": "MIT"
+    }
+  ],
+  "skills": [
+    {
+      "name": "ludus-wechat",
+      "category": "social-media",
+      "path": "skills/social-media/ludus-wechat",
+      "vendor": "references/_vendor/wechat",
+      "vendorSkillCount": 4
+    }
+  ],
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-07T00:00:00+08:00",
+  "upstreamTreeSha256": "096b765bea767f3b88ebb96d3f0a24f20451bc2bb01023a655542fa53d217a98",
+  "replacements": [
+    {
+      "name": "wechat-article-writer",
+      "reason": "upstream had no LICENSE file",
+      "license": "MIT",
+      "path": "references/_vendor/wechat/skills/wechat-article-writer"
+    }
+  ],
+  "removed": [
+    {
+      "name": "khazix-writer",
+      "reason": "upstream had no LICENSE file; not included"
+    }
+  ]
+}
