@@ -3,7 +3,7 @@ name: ludus-wechat
 description: "公众号一条龙：选题、写作、配图、排版、上传草稿."
 version: 1.0.0
 author: WeChat Suite Contributors; Ludus extension packaging
-license: MIT AND ISC AND SEE-THIRD-PARTY-NOTICES
+license: PolyForm-Noncommercial-1.0.0
 platforms: [windows, macos, linux]
 metadata:
   ludus:
@@ -119,4 +119,4 @@ metadata:
 - 选题里的知乎条目是示例数据，不保证实时；微博/GitHub 依赖可选的 `mcporter`，不可用时跳过。
 - 百度/CSDN 通过 Jina Reader 抓取，网络异常时可能返回 0 条；此时让用户直接给主题。
 - 配图脚本只依赖 Python 标准库和 `ZHIPU_API_KEY`；上传脚本依赖公众号 API 和 IP 白名单。
-- 上游许可：本包 MIT；`wechat-publisher` 为 ISC；`wechat-article-writer` 为本包自写 MIT 实现，不包含上游无许可证版本。详见 `references/_vendor/wechat/THIRD-PARTY-NOTICES.md`。
+- 许可：本包原创内容 PolyForm Noncommercial 1.0.0；`wechat-publisher` 为 ISC；`wechat-article-writer` 为本包自写 PolyForm NC 实现，不包含上游无许可证版本。详见 `references/_vendor/wechat/THIRD-PARTY-NOTICES.md`。

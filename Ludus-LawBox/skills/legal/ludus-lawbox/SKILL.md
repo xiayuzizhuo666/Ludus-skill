@@ -3,7 +3,7 @@ name: ludus-lawbox
 description: "中国法律工作流：咨询、诉讼、辩护、合同、合规、文书."
 version: 1.0.0
 author: Samwang-afk; pa1nrui1; Ludus extension packaging
-license: PolyForm-Noncommercial-1.0.0 AND MIT
+license: PolyForm-Noncommercial-1.0.0
 platforms: [windows, macos, linux]
 metadata:
   ludus:

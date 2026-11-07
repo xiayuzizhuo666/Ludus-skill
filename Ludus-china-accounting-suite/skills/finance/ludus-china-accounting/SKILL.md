@@ -3,7 +3,7 @@ name: ludus-china-accounting
 description: "中国会计准则：准则选择、记账、报表、税务、审计."
 version: 1.0.0
 author: kylin985ti; Ludus extension packaging
-license: MIT
+license: PolyForm-Noncommercial-1.0.0
 platforms: [windows, macos, linux]
 metadata:
   ludus:

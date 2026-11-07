@@ -3,7 +3,7 @@ name: ludus-howtolivebetter
 description: "人生性价比决策：先查书里条目，再按成本收益排序."
 version: 1.0.0
 author: eternity4719; Ludus extension packaging
-license: CC-BY-4.0 AND MIT
+license: PolyForm-Noncommercial-1.0.0
 platforms: [windows, macos, linux]
 metadata:
   ludus:
