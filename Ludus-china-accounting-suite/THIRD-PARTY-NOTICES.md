@@ -5,11 +5,12 @@
 - Repository: https://github.com/kylin985ti/china-accounting-skills
 - Snapshot: 2026-11-07
 - Tree SHA256: `a54a5231f4c2d36d0dae690e14ce9a719eb85cdbc2e33dbdba976adee6490d8d`
-- License: MIT © 2026 kylin985ti
+- License: MIT © 2026 kylin985ti (upstream snapshot license retained)
 - Vendored at: `skills/finance/ludus-china-accounting/references/_vendor/accounting/`
 - Included: `skills/` (26 个 `SKILL.md`), `docs/USAGE.md`, `README.md`, `LICENSE`, `THIRD-PARTY-NOTICES.md`, `templates/accounting-ledger.md`.
 - Excluded: `install.mjs`, `validate.mjs`, `AGENTS.md`, `CHANGELOG.md`, `VERSION`, `docs/INSTALL.md`, `docs/UPSTREAM-README.md`.
 - Original license: `references/_vendor/accounting/LICENSE` (MIT).
+- Dual licensing: the current maintainers additionally license the original accounting content in this package under PolyForm NC; the upstream MIT license remains available for the upstream snapshot. MIT rights already granted cannot be revoked.
 
 ## 2. 本包新增内容
 
