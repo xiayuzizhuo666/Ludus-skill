@@ -13,4 +13,4 @@
 
 ## 许可
 
-书籍正文 CC BY 4.0，代码 MIT；保留作者署名、来源链接和修改声明。增强项目 `how-to-survive-unemployment` 为 MIT + CC BY 4.0。
+新增封装/入口/适配内容 PolyForm NC；书籍正文 CC BY 4.0；上游代码/增强 MIT + CC BY 4.0。保留署名、来源链接和修改声明；商业使用新增内容需授权。

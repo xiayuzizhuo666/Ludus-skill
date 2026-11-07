@@ -25,4 +25,4 @@
 
 ## 3. 本包新增内容
 
-`SKILL.md`、`references/INDEX.md`、`references/PATHS.md`、`scripts/show_vendor_paths.py`、`install.py`、`tests/` 和包根文档由本包新增，采用 MIT；见 `LICENSE`。该 MIT 仅覆盖新增内容，不覆盖 LawBox 的 PolyForm NC 内容。
+`SKILL.md`、`references/INDEX.md`、`references/PATHS.md`、`scripts/show_vendor_paths.py`、`install.py`、`tests/` 和包根文档由本包新增，采用 PolyForm Noncommercial 1.0.0；商业使用需取得授权；见 `LICENSE`。

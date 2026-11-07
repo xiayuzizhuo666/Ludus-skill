@@ -20,8 +20,8 @@
 ## 3. wechat-article-writer (self-authored replacement)
 
 - Upstream ClawHub version had **no LICENSE file** and is **not included** in this package.
-- The `wechat-article-writer/` directory is a new, self-authored MIT implementation of the six-stage writing workflow, title patterns, frameworks, style guide and image-prompt guide.
-- License: MIT, same as this package's new content.
+- The `wechat-article-writer/` directory is a new, self-authored PolyForm Noncommercial 1.0.0 implementation of the six-stage writing workflow, title patterns, frameworks, style guide and image-prompt guide.
+- License: PolyForm Noncommercial 1.0.0, same as this package's new content.
 - Files: `SKILL.md`, `writing_style.md`, `references/`, `scripts/generate_images.py`, `scripts/image.env.example`.
 - No upstream text, examples or scripts from the no-license version are retained.
 
@@ -37,4 +37,4 @@
 
 ## 5. 本包新增内容
 
-`SKILL.md`、`references/INDEX.md`、`references/PATHS.md`、`scripts/run_wechat.py`、`templates/wechat-config.example.json`、`install.py`、`tests/` 和包根文档由本包新增，采用 MIT；见 `LICENSE`。
+`SKILL.md`、`references/INDEX.md`、`references/PATHS.md`、`scripts/run_wechat.py`、`templates/wechat-config.example.json`、`install.py`、`tests/` 和包根文档由本包新增，采用 PolyForm Noncommercial 1.0.0；商业使用需取得授权；见 `LICENSE`。

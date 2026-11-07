@@ -13,4 +13,4 @@
 
 ## 许可
 
-本包新增内容 MIT；`wechat-publisher` 为 ISC；`wechat-topic-selector` 为 MIT；`wechat-article-writer` 为本包自写 MIT 实现，不包含上游无许可证版本。
+新增封装/入口与自写写作技能 PolyForm NC；`wechat-publisher` 为 ISC；`wechat-topic-selector` 为 MIT；增强项目 MIT；保留原许可证；商业使用新增内容需授权。

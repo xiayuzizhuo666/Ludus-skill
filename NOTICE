@@ -1,37 +1,29 @@
 # Licensing notice
 
-This repository contains four independently licensed Ludus extension packs. The
-root README is a summary; the controlling texts are in each package.
+This repository contains new packaging, entry skills, routing documents, adapter
+scripts, tests, and READMEs (the "new content") and vendored upstream components.
 
-## Ludus-HowToLiveBetter
+## New content
 
-- Book text: CC BY 4.0.
-- Code and packaging: MIT.
-- Includes `how-to-survive-unemployment` (MIT + CC BY 4.0).
-- See `Ludus-HowToLiveBetter/LICENSE` and `Ludus-HowToLiveBetter/THIRD-PARTY-NOTICES.md`.
+The new content is licensed under the PolyForm Noncommercial License 1.0.0.
+Commercial use of the new content requires a separate license from the copyright
+holder. See `LICENSE`.
 
-## Ludus-LawBox
+## Vendored upstream components
 
-- LawBox additions: PolyForm Noncommercial 1.0.0 (noncommercial).
-- Upstream `legal-skills`: MIT.
-- `cn-law-hub`: Apache-2.0.
-- See `Ludus-LawBox/LICENSE`, `Ludus-LawBox/THIRD-PARTY-NOTICES.md`, and the
-  vendored licenses under `Ludus-LawBox/skills/legal/ludus-lawbox/references/_vendor/lawbox/`.
+These components remain under their original licenses. This repository does not
+relicense them:
 
-## Ludus-china-accounting-suite
+- `Ludus-HowToLiveBetter`: book text CC BY 4.0; upstream code and the
+  `how-to-survive-unemployment` enhancement MIT/CC BY 4.0.
+- `Ludus-LawBox`: LawBox additions PolyForm Noncommercial 1.0.0; upstream
+  `legal-skills` MIT; `cn-law-hub` Apache-2.0.
+- `Ludus-china-accounting-suite`: upstream skills MIT.
+- `Ludus-WeChat`: `wechat-topic-selector` MIT; `wechat-publisher` ISC;
+  `wechat-article-pipeline` MIT.
 
-- Upstream skills and packaging: MIT.
-- See `Ludus-china-accounting-suite/LICENSE` and
-  `Ludus-china-accounting-suite/THIRD-PARTY-NOTICES.md`.
+Because the upstream licenses permit their own commercial use, third parties may
+still use those upstream components under their original terms. The
+noncommercial restriction applies to the new content.
 
-## Ludus-WeChat
-
-- Packaging and the self-authored `wechat-article-writer`: MIT.
-- `wechat-publisher`: ISC (magicx).
-- `wechat-topic-selector`: MIT.
-- The upstream `wechat-article-writer` and `khazix-writer` versions had no
-  LICENSE file and are not included.
-- See `Ludus-WeChat/LICENSE` and `Ludus-WeChat/THIRD-PARTY-NOTICES.md`.
-
-No package in this repository includes real credentials, client materials, or
-case files.
+No package includes real credentials, client materials, or case files.

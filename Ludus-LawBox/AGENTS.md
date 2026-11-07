@@ -13,4 +13,4 @@
 
 ## 许可
 
-LawBox 新增内容 PolyForm Noncommercial 1.0.0；上游 MIT 内容保留 MIT；`cn-law-hub` 为 Apache-2.0。公开仓库保留 NC 声明；商业使用需授权。
+新增封装/入口与 LawBox 新增内容 PolyForm NC；上游 MIT 内容保留 MIT；`cn-law-hub` Apache-2.0。公开仓库保留 NC 声明；商业使用需授权。

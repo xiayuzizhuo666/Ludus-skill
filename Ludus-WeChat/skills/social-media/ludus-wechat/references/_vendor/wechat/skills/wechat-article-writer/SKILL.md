@@ -3,7 +3,7 @@ name: wechat-article-writer
 description: 公众号六阶段写作：选题、标题、框架、成稿、保存、配图提示词.
 version: 1.0.0
 author: Ludus extension packaging
-license: MIT
+license: PolyForm-Noncommercial-1.0.0
 ---
 
 # 公众号文章写作

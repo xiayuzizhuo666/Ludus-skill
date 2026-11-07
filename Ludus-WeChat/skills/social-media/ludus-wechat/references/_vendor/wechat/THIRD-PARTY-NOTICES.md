@@ -4,5 +4,5 @@
 
 - `wechat-topic-selector`：MIT。
 - `wechat-publisher`：ISC（magicx）。
-- `wechat-article-writer`：本包自写 MIT 实现；上游 ClawHub 版本没有 LICENSE，未包含。
+- `wechat-article-writer`：本包自写 PolyForm NC 实现；上游 ClawHub 版本没有 LICENSE，未包含。
 - `khazix-writer`：上游没有 LICENSE，未包含。

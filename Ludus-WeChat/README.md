@@ -51,8 +51,8 @@ Ludus-WeChat/
 
 ## 许可
 
-本包 MIT；`wechat-publisher` ISC；`wechat-article-writer` 为本包自写 MIT 实现。
+新增封装/入口与自写写作技能 PolyForm Noncommercial 1.0.0；`wechat-topic-selector` MIT；`wechat-publisher` ISC；增强项目 MIT。
 
-可再分发；保留 `wechat-publisher` 的 ISC 声明。
+非商用；商业使用新增内容需取得授权。上游组件仍按原许可证授权；保留 `wechat-publisher` 的 ISC 声明。
 
 上游归属与修改说明见 `THIRD-PARTY-NOTICES.md`；上游原始许可证在各自的 `references/_vendor/.../LICENSE`。

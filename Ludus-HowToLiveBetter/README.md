@@ -51,8 +51,8 @@ Ludus-HowToLiveBetter/
 
 ## 许可
 
-书籍正文 CC BY 4.0；代码 MIT。必须保留作者署名与来源链接。
+新增封装/入口/路由与适配内容 PolyForm Noncommercial 1.0.0；书籍正文 CC BY 4.0；上游代码/增强 MIT + CC BY 4.0。必须保留作者署名与来源链接。
 
-本包可再分发，但必须保留 `LICENSE`、`LICENSE-CODE` 和 `THIRD-PARTY-NOTICES.md` 中的署名与许可声明。
+非商用；商业使用新增内容需取得授权。上游组件仍按原许可证授权；必须保留 `LICENSE`、`LICENSE-CODE` 和 `THIRD-PARTY-NOTICES.md` 中的署名与许可声明。
 
 上游归属与修改说明见 `THIRD-PARTY-NOTICES.md`；上游原始许可证在各自的 `references/_vendor/.../LICENSE`。

@@ -1,7 +1,7 @@
 {
   "package": "Ludus-china-accounting-suite",
   "version": "1.0.0",
-  "licenseSummary": "MIT",
+  "licenseSummary": "PolyForm-Noncommercial-1.0.0 (new packaging) AND MIT (upstream skills)",
   "internalUseOnly": false,
   "compliancePassRequired": false,
   "upstream": [
@@ -24,5 +24,6 @@
     }
   ],
   "schemaVersion": 1,
-  "generatedAt": "2026-11-07T00:00:00+08:00"
+  "generatedAt": "2026-11-07T00:00:00+08:00",
+  "commercialUseRequiresPermission": true
 }
